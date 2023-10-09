@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Display {{user.first_name}}</title>
+</head>
+<body>
+    <h1>Information for {{user.first_name}} {{user.last_name}}</h1>
+    <div class="new_user">
+        <h2>ID: {{user.id}}</h2>
+        <h2>First Name: {{user.first_name}}</h2>
+        <h2>Last Name: {{user.last_name}}</h2>
+        <h2>Email Address: {{user.email}}</h2>
+        <div class="hrefs">
+            <a href="/user/delete/{{user.id}}" class="href">Delete</a>
+            <a href="/{{user.id}}" class="href">Update</a>
+        </div>
+    </div>
+</body>
+</html>

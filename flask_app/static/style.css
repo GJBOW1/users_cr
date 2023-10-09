@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: darkgray;
+}
+
+.header {
+    display: flex;
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0em 1em 0em;
+    text-decoration: underline;
+}
+
+.containertwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerthree {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    background-color: green;
+    color: white;
+    box-shadow: 3px 3px black;
+    font-size: large;
+    margin: 1em;
+    border: black 2px solid;
+}
+
+.users {
+
+    display: flex;
+    width: 800px;
+    height: 400px;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: scroll;
+    border: 2px black solid;
+    background-color: rgb(63, 183, 91);
+    font-size: x-large;
+    
+}
+
+div p {
+    display: flex;
+    flex-direction: row;
+}
+
+.new_user {
+    font-weight: bold;
+}
+
+.hrefs {
+    display: flex;
+}
+
+.href {
+    display: flex;
+    width: 4em;
+    height: 1.5em;
+    border: black 2px solid;
+    background-color: green;
+    color: white;
+    box-shadow: 3px 3px black;
+    font-size: large;
+    margin: 1em;
+    text-decoration:none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+label {
+    font-size: x-large;
+}
+
+input {
+    background-color: lightgreen;
+}

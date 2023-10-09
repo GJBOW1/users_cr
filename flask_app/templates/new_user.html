@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>User</title>
+</head>
+<body>
+    <div class="home">
+        <form action="/" method="POST">
+            <input class="button" type="submit" value="Return Home">
+        </form>
+    </div>
+    <h1>Newest User: </h1>
+    <hr>   
+</body>
+<div class="users">
+    <p>User ID: {{(users|reverse|selectattr('id')|first).id}} </p><br>
+    <p>First Name: {{(users|reverse|selectattr('first_name')|first).first_name}} </p><br>
+    <p>Last Name: {{(users|reverse|selectattr('last_name')|first).last_name}}</p> <br>
+    <p>Email Address: {{(users|reverse|selectattr('email')|first).email}} </p><br>
+</div>
+<div class="hrefs">
+    <a href="/user/delete/{{(users|reverse|selectattr('id')|first).id}}" class="href">Delete</a>
+    <a href="/{{(users|reverse|selectattr('id')|first).id}}" class="href">Update</a>
+</div>
+<hr>
+</html>

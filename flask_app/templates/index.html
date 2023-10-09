@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Home</title>
+</head>
+<body>
+    <div class="containerone">
+        <h1 class="header">Users:</h1>
+    </div>  
+    <div>
+        <form class="containertwo" action="/add/user" method="POST">
+            <input class="button" type="submit" value="Add a new user">
+        </form>
+        <hr>
+    </div>
+    <div class="containerthree">
+        <div class="users">
+            {% for user in users|reverse %}
+                <div class="new_user">
+                    <p>ID: {{user.id}}</p>
+                    <p>First Name: {{user.first_name}}</p>
+                    <p>Last Name: {{user.last_name}}</p>
+                    <p>Email Address: {{user.email}}</p>
+                    <a href="/user/delete/{{user.id}}">Delete</a>
+                    <a href="/{{user.id}}">Update</a>
+                    <a href="/display/{{user.id}}">Show</a>
+                    <hr color="black">
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
